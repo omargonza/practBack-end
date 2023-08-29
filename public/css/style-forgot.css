@@ -1,11 +1,12 @@
 body {
-  background: url("../img/forgot-fondo.jpg") no-repeat center top;
+  background: url("../img/fondoreloj5.jpg") no-repeat center top;
   margin: 0;
   padding: 0;
   background-size: cover;
   font-family: sans-serif;
   height: 100%;
   overflow: scroll;
+  
 }
 
 /* Registro User */
@@ -13,7 +14,33 @@ body {
 .forgot-box {
   width: 480px;
   height: auto;
-  background: #600252;
+  background-image: radial-gradient(
+    circle at 10% 10%, 
+    #ce5d3ed1 0, 
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 80% 80%, 
+    #dcd5cd 0, 
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 50% 50%, 
+    #917b53 0, 
+    transparent 40%
+  ),
+  radial-gradient(
+    circle at 30% 70%, 
+    #9a6f1f 0, 
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 70% 30%, 
+    #624c24 0, 
+    transparent 50%
+  );
+  background-color: #f3f0e1;
+  
   color: #fff;
   top: 50%;
   left: 50%;
@@ -58,7 +85,7 @@ body {
   border: none;
   outline: none;
   height: 40px;
-  background: #01657ed1;
+  background: #b72a03d1;
   color: #fff;
   font-size: 18px;
   border-radius: 20px;
@@ -73,7 +100,7 @@ body {
 }
 
 .forgot-box a:hover {
-  color: #3594ae;
+  color: #eb0e16;
 }
 
 @media (max-width: 768px) {

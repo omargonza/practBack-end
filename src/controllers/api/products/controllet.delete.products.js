@@ -16,11 +16,11 @@ export async function deleteProduct(req, res, next) {
     await productsRepository.deleteOne(req.params.pid);
     if (producto.owner !== "super-admin") {
       const mailData = {
-        subject: "Producto eliminado --Astros",
+        subject: "Producto eliminado --Tiempo es oro",
         mensaje: `Hola,\n\n
-           Astros le notifica que el producto de su propiedad ${producto.code}, ha sido eliminado.\n\n
-          Abrazo de gol\n
-          Astros ⭐`,
+            Le notificamos que el producto de su propiedad ${producto.code}, ha sido eliminado.\n\n
+          Saludos\n
+          Tiempo es oro`,
       };
       await emailService.send(producto.owner, mailData);
     }

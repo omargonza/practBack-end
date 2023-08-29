@@ -118,8 +118,7 @@ strong {
   transform: scale(1.3);
 }
 
-.container {
-}
+
 /* Form */
 main {
   max-width: 800px;
@@ -131,7 +130,32 @@ form {
   max-width: 700px;
   margin: 2rem auto 0;
   padding: 30px;
-  background-color: #bd9cfa;
+  background-image: radial-gradient(
+    circle at 10% 10%, 
+    #ce5d3ed1 0, 
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 80% 80%, 
+    #dcd5cd 0, 
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 50% 50%, 
+    #917b53 0, 
+    transparent 40%
+  ),
+  radial-gradient(
+    circle at 30% 70%, 
+    #9a6f1f 0, 
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 70% 30%, 
+    #624c24 0, 
+    transparent 50%
+  );
+  background-color: #f3f0e1;;
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
