@@ -257,7 +257,7 @@ container-footer{
 
 .pagination li a {
   text-decoration: none;
-  color: #01657ed1;
+  color: #632e03d1;
   font-weight: bold;
   padding: 5px 10px;
   border: 1px solid #333;
@@ -265,7 +265,7 @@ container-footer{
 }
 
 .pagination li a:hover {
-  background-color: #bd9cfa;
+  background-color: #da0c17;
   color: #fff;
 }
 

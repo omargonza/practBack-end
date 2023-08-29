@@ -121,7 +121,7 @@ main {
 }
 
 #cart-heading {
-  color: #01657ed1;
+  color: #dd550cd1;
   margin-top: 0;
 }
 
@@ -142,7 +142,7 @@ main {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  background-color: #bd9cfa;
+  background-color: #b33a0a;
   color: #fff;
 }
 
@@ -165,7 +165,7 @@ main {
 }
 
 .remove-item {
-  background-color: #01657ed1;
+  background-color: #cd5a1cd1;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -175,7 +175,7 @@ main {
 }
 
 #pay-button {
-  background-color: #007bff;
+  background-color: #920308;
   color: #fff;
   border: none;
   border-radius: 10px;

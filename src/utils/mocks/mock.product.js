@@ -13,12 +13,9 @@ export async function moackingProducts() {
       code: `code${i}`,
       stock: faker.datatype.number({ min: 1, max: 100 }),
       category: faker.random.arrayElement([
-        "AFA",
-        "CLUBS",
-        "+SELECCIONES",
-        "RETRO",
-        "OTROS",
-        "PERLITAS",
+        "QUIENES SOMOS",
+        "NUESTROS PRODUCTOS",
+       
       ]),
       owner: "super-admin",
     });
