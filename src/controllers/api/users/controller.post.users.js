@@ -12,11 +12,11 @@ export async function postUsuarios(req, res, next) {
       httpOnly: true,
     });
 /*    const mailData = {
-      subject: "Bienvenido a Astros",
+      subject: "Bienvenido",
       mensaje: `Hola,\n\n
-        Gracias por elegir Astros, nos enorgullese que formes parte de nuestra familia Astromanníaca.Tu usuario ya se encuentra creado, que disfrutres tu pase por nuestra tienda virtual\n\n
-        Saludos,\n
-        Astros ⭐`,
+        Gracias por elegirnos,tu usuario ya se encuentra creado, que disfrutres tu pase por nuestra tienda virtual\n\n
+        Saludos Tiempo es oro,\n
+        `,
     };
     await emailService.send(userCreated.email, mailData);*/
 
