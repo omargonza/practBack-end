@@ -23,15 +23,14 @@ components:
           default: []
       example:
         - product:
-            id: "8b249da4-bf67-4073-b03b-2aaf42987b8a"
-            title: "Boca Jrs 23"
-            description: "Titular-Original"
-            price: 35000
-            thumbnail:
-              - "data:image.jpg"
-            code: "CABJT23"
-            stock: 12
-            status: true
-            category: "CLUBS"
+              id: "64807794792f6d6ea06cc144"
+                    title: "Roles Datejust",
+              description: "Fecha exacta",
+                     code: "R1",
+                    price: 101,
+                   status: true,
+                    stock: 30,
+                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305",
+                 category: "rolex"    
             owner: "super-admin"
           quantity: 3

@@ -46,24 +46,22 @@ components:
           type: string
           description: The category of the product.
           enum:
-            - AFA
-            - CLUBS
-            - +SELECCIONES
-            - RETRO
-            - OTROS
-            - PERLITAS
+              - AUDEMARS
+              - ROLEX
+              - OMEGA
+              - HUBLOT
+              - TAG
+              - ROLEXDAY
         owner:
           type: string
           description: The owner of the product.
       example:
-        id: "801de265-9dfe-4db7-bc84-0cc89a11f070"
-        title: "Argentina Qatar Titular"
-        description: "mundial 2022"
-        price: 15000
-        thumbnail:
-          - "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/611f58bb7b4444bbb62eaeca012c57dd_9366/camiseta-titular-argentina-22.jpg"
-        code: "ARG22"
-        stock: 100
-        status: true
-        category: "AFA"
+        id: "647c19012919dd638f75d8bf"
+        title: 'HUBLOT Big Bang',
+          description: 'Caja de titanio o ceramica. Corona giratoria.',
+                 code: 'R10',
+                price: 99,
+            thumbnail: 'https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305',
+                stock: 20,
+             category: 'hublot',
         owner: "super-admin"

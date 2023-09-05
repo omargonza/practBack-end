@@ -61,41 +61,39 @@ paths:
                         category:
                           type: string
                           enum:
-                            - AFA
-                            - CLUBS
-                            - +SELECCIONES
-                            - RETRO
-                            - OTROS
-                            - PERLITAS
+                            - AUDEMARS
+                            - ROLEX
+                            - OMEGA
+                            - HUBLOT
+                            - TAG
+                            - ROLEXDAY
                         owner:
                           type: string
                     quantity:
                       type: number
                 example:
                   - product:
-                      id: "8b249da4-bf67-4073-b03b-2aaf42987b8a"
-                      title: "Boca Jrs 23"
-                      description: "Titular-Original"
-                      price: 35000
-                      thumbnail:
-                        - "data:image.jpg"
-                      code: "CABJT23"
-                      stock: 12
-                      status: true
-                      category: "CLUBS"
-                      owner: "super-admin"
+                       id: "64807794792f6d6ea06cc144"
+                    title: "Roles Datejust",
+              description: "Fecha exacta",
+                     code: "R1",
+                    price: 101,
+                   status: true,
+                    stock: 30,
+                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305",
+                 category: "rolex"    
+                    owner: "super-admin"
                     quantity: 5
                   - product:
-                      id: "efgh5678"
-                      title: "Example Product"
-                      description: "This is an example product."
-                      price: 9999
-                      thumbnail:
-                        - "https://example.com/product.jpg"
-                      code: "EXMPL1"
-                      stock: 50
-                      status: true
-                      category: "OTROS"
+                          id: "648077d9792f6d6ea06cc146"
+                    title: "OMEGA Speedmaster",
+              description: "Velocidad",
+                     code: "R2",
+                    price: 104,
+                   status: true,
+                    stock: 50,
+                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305",
+                 category: "omega"
                       owner: "admin"
                     quantity: 1
         "404":
