@@ -1,13 +1,13 @@
 paths:
   /products/{id}:
     put:
-      summary: Edit the product with given id
+      summary: Edit the product with the given id
       tags:
         - Products
       parameters:
         - name: id
           in: path
-          description: path parameter takes the product id
+          description: Path parameter takes the product id
           required: true
           schema:
             type: string
@@ -18,29 +18,29 @@ paths:
             schema:
               $ref: "#/components/requestBodies/NewProduct"
             example:
-              title: 'HUBLOT Big Bang',
-        description: 'Caja de titanio o ceramica. Corona giratoria.',
-               code: 'R10',
-              price: 99,
-          thumbnail: 'https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305',
-              stock: 20,
-           category: 'hublot',
+              title: 'HUBLOT Big Bang'
+              description: 'Caja de titanio o cerámica. Corona giratoria.'
+              code: 'R10'
+              price: 99
+              thumbnail: 'https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305'
+              stock: 20
+              category: 'HUBLOT'
               owner: "super-admin"
       responses:
         "200":
-          description: The product with given id has been edited
+          description: The product with the given id has been edited
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Product"
               example:
-                title: 'HUBLOT Big Bang',
-          description: 'Caja de titanio o ceramica. Corona giratoria.',
-                 code: 'R10',
-                price: 99,
-            thumbnail: 'https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305',
-                stock: 20,
-             category: 'hublot',
+                title: 'HUBLOT Big Bang'
+                description: 'Caja de titanio o cerámica. Corona giratoria.'
+                code: 'R10'
+                price: 99
+                thumbnail: 'https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305'
+                stock: 20
+                category: 'HUBLOT'
                 owner: "super-admin"
         "404":
           description: Product not found Error

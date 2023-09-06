@@ -1,7 +1,7 @@
 paths:
   /carts:
     post:
-      summary: Creates a new cart
+      summary: Creates a new cart  # Corregida la sangría
       tags:
         - Carts
       responses:

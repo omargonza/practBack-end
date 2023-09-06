@@ -7,7 +7,13 @@ paths:
       parameters:
         - name: cid
           in: path
-          description: path parameter takes the cart id
+          description: Path parameter takes the cart id
+          required: true
+          schema:
+            type: string
+        - name: pid
+          in: path
+          description: Path parameter takes the product id
           required: true
           schema:
             type: string
@@ -24,9 +30,9 @@ paths:
                 quantity:
                   type: number
                   description: The quantity of the product in the cart.
-            example:
-              product: "8b249da4-bf67-4073-b03b-2aaf42987b8a"
-              quantity: 5
+              example:
+                product: "8b249da4-bf67-4073-b03b-2aaf42987b8a"
+                quantity: 5
       responses:
         "200":
           description: Products in the cart with given id
@@ -73,28 +79,28 @@ paths:
                       type: number
                 example:
                   - product:
-                       id: "64807794792f6d6ea06cc144"
-                    title: "Roles Datejust",
-              description: "Fecha exacta",
-                     code: "R1",
-                    price: 101,
-                   status: true,
-                    stock: 30,
-                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305",
-                 category: "rolex"    
-                    owner: "super-admin"
+                      id: "64807794792f6d6ea06cc144"
+                      title: "Roles Datejust"
+                      description: "Fecha exacta"
+                      code: "R1"
+                      price: 101
+                      status: true
+                      stock: 30
+                      thumbnail: ["https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305"]
+                      category: "ROLEX"
+                      owner: "super-admin"
                     quantity: 5
                   - product:
-                          id: "648077d9792f6d6ea06cc146"
-                    title: "OMEGA Speedmaster",
-              description: "Velocidad",
-                     code: "R2",
-                    price: 104,
-                   status: true,
-                    stock: 50,
-                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305",
-                 category: "omega"
+                      id: "648077d9792f6d6ea06cc146"
+                      title: "OMEGA Speedmaster"
+                      description: "Velocidad"
+                      code: "R2"
+                      price: 104
+                      status: true
+                      stock: 50
+                      thumbnail: ["https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305"]
+                      category: "OMEGA"
                       owner: "admin"
                     quantity: 1
         "404":
-          description: cart not found Error
+          description: Cart not found Error

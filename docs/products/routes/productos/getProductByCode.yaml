@@ -1,18 +1,19 @@
 paths:
   /products/code/{code}:
     get:
-      summary: Gets the product with given code
+      summary: Gets the product with the given code  # Corregida la sangría
       tags:
         - Products
       parameters:
         - name: code
           in: path
-          description: path parameter takes the product code
+          description: Path parameter takes the product code
           required: true
-          type: string
+          schema:
+            type: string
       responses:
         "200":
-          description: The product with given code
+          description: The product with the given code
           content:
             application/json:
               schema:

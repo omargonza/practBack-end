@@ -1,18 +1,18 @@
 paths:
   /carts/{cid}/product/{pid}:
     delete:
-      summary: Delete product in cart
+      summary: Delete product in cart  # Corregida la sangría
       tags:
         - Carts
       parameters:
         - name: cid
           in: path
-          description: path parameter takes the cart id
+          description: Path parameter takes the cart id
           required: true
           type: string
         - name: pid
           in: path
-          description: path parameter takes the product id
+          description: Path parameter takes the product id
           required: true
           type: string
       responses:

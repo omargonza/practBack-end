@@ -46,22 +46,23 @@ components:
           type: string
           description: The category of the product.
           enum:
-              - AUDEMARS
-              - ROLEX
-              - OMEGA
-              - HUBLOT
-              - TAG
-              - ROLEXDAY
+            - AUDEMARS
+            - ROLEX
+            - OMEGA
+            - HUBLOT
+            - TAG
+            - ROLEXDAY
         owner:
           type: string
           description: The owner of the product.
       example:
         id: "647c19012919dd638f75d8bf"
-        title: 'HUBLOT Big Bang',
-          description: 'Caja de titanio o ceramica. Corona giratoria.',
-                 code: 'R10',
-                price: 99,
-            thumbnail: 'https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305',
-                stock: 20,
-             category: 'hublot',
+        title: 'HUBLOT Big Bang'
+        description: 'Caja de titanio o cerámica. Corona giratoria.'
+        code: 'R10'
+        price: 99
+        thumbnail: ['https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305']
+        stock: 20
+        status: true
+        category: 'HUBLOT'
         owner: "super-admin"

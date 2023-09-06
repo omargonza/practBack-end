@@ -1,7 +1,7 @@
 paths:
   /products:
     get:
-      summary: Gets every product available
+      summary: Gets every product available  # Corregida la sangría
       tags:
         - Products
       responses:

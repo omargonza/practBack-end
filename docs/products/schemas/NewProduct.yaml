@@ -1,4 +1,5 @@
-# NewProduct
+# NewProduct 
+
 components:
   requestBodies:
     NewProduct:
@@ -36,21 +37,21 @@ components:
           type: string
           description: The category of the product.
           enum:
-              - AUDEMARS
-              - ROLEX
-              - OMEGA
-              - HUBLOT
-              - TAG
-              - ROLEXDAY
-         owner:
+            - AUDEMARS
+            - ROLEX
+            - OMEGA
+            - HUBLOT
+            - TAG
+            - ROLEXDAY
+        owner:
           type: string
           description: The owner of the product.
       example:
-        title: 'HUBLOT Big Bang',
-          description: 'Caja de titanio o ceramica. Corona giratoria.',
-                 code: 'R10',
-                price: 99,
-            thumbnail: 'https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305',
-                stock: 20,
-             category: 'hublot',
+        title: 'HUBLOT Big Bang'
+        description: 'Caja de titanio o cerámica. Corona giratoria.'
+        code: 'R10'
+        price: 99
+        thumbnail: 'https://cdn4.chrono24.com/images/topmodels/1065-ae2seivfjwbgqxgobd7rimxu-Original.png?auto=compress&amp;h=305'
+        stock: 20
+        category: 'HUBLOT'  # Corregido a mayúsculas para que coincida con el enum
         owner: "super-admin"

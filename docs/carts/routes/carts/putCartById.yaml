@@ -1,18 +1,13 @@
 paths:
   /carts/{id}:
     put:
-      summary: Edits the products in cart with given id
+      summary: Edits the products in cart with given id  # Corregida la sangría
       tags:
         - Carts
       parameters:
         - name: id
           in: path
-          description: path parameter takes the cart id
-          required: true
-          type: string
-        - name: pid
-          in: path
-          description: path parameter takes the product id
+          description: Path parameter takes the cart id
           required: true
           type: string
       requestBody:
@@ -31,27 +26,29 @@ paths:
               example:
                 - product:
                     id: "64807794792f6d6ea06cc144"
-                    title: "Roles Datejust",
-              description: "Fecha exacta",
-                     code: "R1",
-                    price: 101,
-                   status: true,
-                    stock: 30,
-                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305",
-                 category: "rolex"    
+                    title: "Roles Datejust"
+                    description: "Fecha exacta"
+                    code: "R1"
+                    price: 101
+                    status: true
+                    stock: 30
+                    thumbnail:
+                      - "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305"
+                    category: "ROLEX"
                     owner: "super-admin"
-                  quantity: 3
+                    quantity: 3
                 - product:
                     id: "648077d9792f6d6ea06cc146"
-                    title: "OMEGA Speedmaster",
-              description: "Velocidad",
-                     code: "R2",
-                    price: 104,
-                   status: true,
-                    stock: 50,
-                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305",
-                 category: "omega"
+                    title: "OMEGA Speedmaster"
+                    description: "Velocidad"
+                    code: "R2"
+                    price: 104
+                    status: true
+                    stock: 50
+                    thumbnail:
+                      - "https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305"
+                    category: "OMEGA"
                     owner: "admin"
-                  quantity: 1
+                    quantity: 1
         "404":
-          description: cart not found Error
+          description: Cart not found Error

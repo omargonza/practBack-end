@@ -1,15 +1,16 @@
 paths:
   /carts/{id}:
     get:
-      summary: Gets the products in cart with given id
+      summary: Gets the products in cart with given id  # Corregida la sangría
       tags:
         - Carts
       parameters:
         - name: id
           in: path
-          description: path parameter takes the cart id
+          description: Path parameter takes the cart id
           required: true
-          type: string
+          schema:
+            type: string
       responses:
         "200":
           description: The cart with given id
@@ -18,4 +19,4 @@ paths:
               schema:
                 $ref: "#/components/schemas/Cart"
         "404":
-          description: cart not found Error
+          description: Cart not found Error

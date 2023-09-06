@@ -1,13 +1,13 @@
 paths:
   /carts/{id}:
     delete:
-      summary: Delete all products in cart
+      summary: Delete all products in cart  
       tags:
         - Carts
       parameters:
         - name: id
           in: path
-          description: path parameter takes the cart id
+          description: Path parameter takes the cart id
           required: true
           type: string
       responses:

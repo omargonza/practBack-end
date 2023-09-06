@@ -1,79 +1,86 @@
 components:
   requestBodies:
     CartProducts:
-      type: array
-      items:
-        type: object
-        properties:
-          product:
-            type: object
-            properties:
-              _id:
-                type: string
-              id:
-                type: string
-              title:
-                type: string
-                description: The title of the product.
-              description:
-                type: string
-                description: The description of the product.
-              price:
-                type: number
-                description: The price of the product.
-              thumbnail:
-                type: array
-                items:
-                  type: string
-                description: The URLs of the product thumbnails.
-              code:
-                type: string
-                description: The code of the product.
-                maxLength: 7
-              stock:
-                type: number
-                description: The stock quantity of the product.
-              status:
-                type: boolean
-                description: The status of the product.
-              category:
-                type: string
-                description: The category of the product.
-                enum:
-                   - AUDEMARS
-                   - ROLEX
-                   - OMEGA
-                   - HUBLOT
-                   - TAG
-                   - ROLEXDAY
-              owner:
-                type: string
-                description: The owner of the product.
-          quantity:
-            type: number
-            description: The quantity of the product in the cart.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                product:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                    id:
+                      type: string
+                    title:
+                      type: string
+                      description: The title of the product.
+                    description:
+                      type: string
+                      description: The description of the product.
+                    price:
+                      type: number
+                      description: The price of the product.
+                    thumbnail:
+                      type: array
+                      items:
+                        type: string
+                      description: The URLs of the product thumbnails.
+                    code:
+                      type: string
+                      description: The code of the product.
+                      maxLength: 7
+                    stock:
+                      type: number
+                      description: The stock quantity of the product.
+                    status:
+                      type: boolean
+                      description: The status of the product.
+                    category:
+                      type: string
+                      description: The category of the product.
+                      enum:
+                        - AUDEMARS
+                        - ROLEX
+                        - OMEGA
+                        - HUBLOT
+                        - TAG
+                        - ROLEXDAY
+                    owner:
+                      type: string
+                      description: The owner of the product.
+                quantity:
+                  type: number
+                  description: The quantity of the product in the cart.
       example:
         - product:
-          id: "64807794792f6d6ea06cc144"
-                    title: "Roles Datejust",
-              description: "Fecha exacta",
-                     code: "R1",
-                    price: 101,
-                   status: true,
-                    stock: 30,
-                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305",
-                 category: "rolex"    
-                    owner: "super-admin"
+            _id: "64807794792f6d6ea06cc144"
+            id: "64807794792f6d6ea06cc144"
+            title: "Roles Datejust"
+            description: "Fecha exacta"
+            code: "R1"
+            price: 101
+            status: true
+            stock: 30
+            thumbnail:
+              - "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305"
+            category: "ROLEX"
+            owner: "super-admin"
           quantity: 3
         - product:
-             id: "648077d9792f6d6ea06cc146"
-                    title: "OMEGA Speedmaster",
-              description: "Velocidad",
-                     code: "R2",
-                    price: 104,
-                   status: true,
-                    stock: 50,
-                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305",
-                 category: "omega"
-                    owner: "admin"
+            _id: "648077d9792f6d6ea06cc146"
+            id: "648077d9792f6d6ea06cc146"
+            title: "OMEGA Speedmaster"
+            description: "Velocidad"
+            code: "R2"
+            price: 104
+            status: true
+            stock: 50
+            thumbnail:
+              - "https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305"
+            category: "OMEGA"
+            owner: "admin"
           quantity: 1

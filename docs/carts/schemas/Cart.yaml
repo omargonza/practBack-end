@@ -13,24 +13,40 @@ components:
         products:
           type: array
           items:
-            product:
-              type: object
-              properties:
-                id:
-                  type: string
-            quantity:
-              type: number
+            type: object
+            properties:
+              id:
+                type: string
+              title:
+                type: string
+              description:
+                type: string
+              code:
+                type: string
+              price:
+                type: number
+              status:
+                type: boolean
+              stock:
+                type: number
+              thumbnail:
+                type: string
+              category:
+                type: string
+              owner:
+                type: string
           default: []
       example:
-        - product:
-              id: "64807794792f6d6ea06cc144"
-                    title: "Roles Datejust",
-              description: "Fecha exacta",
-                     code: "R1",
-                    price: 101,
-                   status: true,
-                    stock: 30,
-                thumbnail: "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305",
-                 category: "rolex"    
-            owner: "super-admin"
+        - id: "64807794792f6d6ea06cc144"
+          products:
+            - id: "64807794792f6d6ea06cc144"
+              title: "Roles Datejust"
+              description: "Fecha exacta"
+              code: "R1"
+              price: 101
+              status: true
+              stock: 30
+              thumbnail: "https://cdn4.chrono24.com/images/topmodels/2846-alz5vjoi11mxlc54imf27mlj-Original.png?auto=compress&amp;h=305"
+              category: "rolex"
+              owner: "super-admin"
           quantity: 3

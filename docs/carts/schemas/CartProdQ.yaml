@@ -1,7 +1,7 @@
 CartProdQ:
   components:
     requestBodies:
-      CartProdQ:
+    CartProdQ:
         type: object
         properties:
           product:

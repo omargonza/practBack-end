@@ -1,18 +1,19 @@
 paths:
   /products/{id}:
     get:
-      summary: Gets the product with given id
+      summary: Gets the product with the given id  # Corregida la sangría
       tags:
         - Products
       parameters:
         - name: id
           in: path
-          description: path parameter takes the product id
+          description: Path parameter takes the product id
           required: true
-          type: string
+          schema:
+            type: string
       responses:
         "200":
-          description: The product with given id
+          description: The product with the given id
           content:
             application/json:
               schema:
