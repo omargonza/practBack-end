@@ -1,8 +1,8 @@
-# Curso de Backend en Coderhouse - Astros
+# Curso de Backend en Coderhouse 
 
 ## Abstract
 
-Este proyecto es el resultado final del curso de backend con Node.js en Coderhouse.El mismo consiste en la implementación de un backend para una plataforma de comercio electrónico utilizando Node.js y a partir de la creación de una API REST. La experiencia Astros es un E-Commerce esta pensada para funcionar como un e-showroom deportivo.
+Este proyecto es el resultado final del curso de backend con Node.js en Coderhouse.El mismo consiste en la implementación de un backend para una plataforma de comercio electrónico utilizando Node.js y a partir de la creación de una API REST. 
 
 ## Librerias
 
@@ -89,13 +89,13 @@ En interfaz visual: Real time products (reutilizando lo hecho con socket.io prev
 
 ## Contacto
 
-- [Instagram](https://www.instagram.com/joabidart/)
-- [LinkedIn](https://www.linkedin.com/in/joaquin-bidart-33561918a/)
+- [Instagram](https://www.instagram.com/mart_inezgon/)
+- [LinkedIn](https://www.linkedin.com/in/gonzalo-martinez-1b5a69263/)
 
 ### Deploy
 
-- [web](https://back-proyecto-final-production-bee0.up.railway.app/)
+- [web](https:///)
 
 ### Este proyecto - version
 
-- [Repo](https://github.com/JoaCode19/Back-PF-Local)
+- [Repo](https://github.com/omargonza/practBack-end.git)
