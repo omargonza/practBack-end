@@ -89,8 +89,8 @@ En interfaz visual: Real time products (reutilizando lo hecho con socket.io prev
 
 ## Contacto
 
-- [Instagram](https://www.instagram.com/mart_inezgon/)
-- [LinkedIn](https://www.linkedin.com/in/gonzalo-martinez-1b5a69263/)
+- [Instagram](https://www.instagram.com)
+- [LinkedIn](https://www.linkedin.com/)
 
 ### Deploy
 
@@ -98,4 +98,4 @@ En interfaz visual: Real time products (reutilizando lo hecho con socket.io prev
 
 ### Este proyecto - version
 
-- [Repo](https://github.com/omargonza/practBack-end.git)
+- [Repo](https://)
