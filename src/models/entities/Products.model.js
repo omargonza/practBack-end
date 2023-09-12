@@ -71,16 +71,16 @@ export default class Products {
 
   validateCategory(category) {
     const allowedCategories = [
-      "AFA",
-      "CLUBS",
-      "+SELECCIONES",
-      "RETRO",
-      "OTROS",
-      "PERLITAS",
+      "AUDEMARS",
+      "ROLEX",
+      "HUBLOT",
+      "TAG",
+      "ROLEXDAY",
+      "OMEGA",
     ];
     if (!allowedCategories.includes(category)) {
       throw new ErrorInvalidArgument(
-        "Invalid category. Allowed categories: AFA, CLUBS, +SELECCIONES, RETRO, OTROS, PERLITAS."
+        "Invalid category. Allowed categories: AUDEMARS, ROLEX, HUBLOT, TAG, ROLEXDAY, OMEGA."
       );
     }
     return category;

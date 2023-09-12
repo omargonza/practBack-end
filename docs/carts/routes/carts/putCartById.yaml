@@ -1,7 +1,7 @@
 paths:
   /carts/{id}:
     put:
-      summary: Edits the products in cart with given id  # Corregida la sangría
+      summary: Edits the products in cart with given id  
       tags:
         - Carts
       parameters:

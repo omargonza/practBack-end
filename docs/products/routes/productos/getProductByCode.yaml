@@ -1,7 +1,7 @@
 paths:
   /products/code/{code}:
     get:
-      summary: Gets the product with the given code  # Corregida la sangría
+      summary: Gets the product with the given code  
       tags:
         - Products
       parameters:

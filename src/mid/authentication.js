@@ -37,7 +37,7 @@ passport.use(
     }
   })
 );
-
+/*
 passport.use(
   "git",
   new gitStrategy(
@@ -76,6 +76,71 @@ passport.use(
           req.user = user;
         }
       } catch {
+        done(new ErrorAuthothentication());
+      }
+      done(null, {
+        name: req.session.user.first_name + " " + req.session.user.last_name,
+        email: req.session.user.email,
+        role: req.session.user.role,
+        age: req.session.user.age,
+        cart: req.session.user.cart,
+      });
+    }
+  )
+);
+
+*/
+
+passport.use(
+  "git",
+  new gitStrategy(
+    {
+      clientID: CLIENTID_GIT,
+      clientSecret: CLIENTSCR_GIT,
+      callbackURL: "http://localhost:8080/api/sessions/gitcall",
+      passReqToCallback: true,
+    },
+    async (req, accessToken, refreshToken, profile, done) => {
+      try {
+        // Obtén la contraseña del cuerpo de la solicitud
+        const { password } = req.body;
+
+        // Realiza aquí la verificación de la contraseña según tus requisitos.
+        // Puedes usar bcrypt u otra técnica para verificar la contraseña.
+        const isPasswordValid = await verifyPassword(profile.email, password);
+
+        if (!isPasswordValid) {
+          return done(null, false, { message: "Contraseña incorrecta" });
+        }
+
+        const userinfo = {
+          email: `${profile.username}@${profile.username}.com`,
+          first_name: profile.displayName,
+          last_name: profile.displayName,
+          age: 100,
+          password: `${profile.displayName}verficated`,
+          role:
+            profile.email === "adminCoder@coder.com"
+              ? "admin"
+              : profile.email === "gonza.gonza.black.app"
+              ? "admin"
+              : "user",
+        };
+
+        const userCreated = await userService.registrar(userinfo);
+        if (userCreated) {
+          req.session.user = userCreated;
+        } else {
+          const user = await userRepository.findOne({
+            email: `${profile.username}@${profile.username}.com`,
+          });
+          user.last_connection = formatDate(new Date());
+          await userRepository.updateOne(user.id, user);
+          await cmg.delAllProductsInCart(user.cart);
+          req.session.user = user;
+          req.user = user;
+        }
+      } catch (error) {
         done(new ErrorAuthothentication());
       }
       done(null, {

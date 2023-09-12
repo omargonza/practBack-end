@@ -1,7 +1,7 @@
 paths:
   /carts/{cid}/product/{pid}:
     post:
-      summary: Add product in cart  # Corregida la sangría
+      summary: Add product in cart 
       tags:
         - Carts
       parameters:

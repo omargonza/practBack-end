@@ -1,7 +1,7 @@
 paths:
   /carts/{cid}/product/{pid}:
     delete:
-      summary: Delete product in cart  # Corregida la sangría
+      summary: Delete product in cart  
       tags:
         - Carts
       parameters:

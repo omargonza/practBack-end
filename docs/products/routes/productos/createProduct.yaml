@@ -1,7 +1,7 @@
 paths:
   /products:
     post:
-      summary: Creates a new product  # Corregida la sangría
+      summary: Creates a new product  
       tags:
         - Products
       requestBody:

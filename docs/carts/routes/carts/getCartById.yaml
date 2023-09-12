@@ -1,7 +1,7 @@
 paths:
   /carts/{id}:
     get:
-      summary: Gets the products in cart with given id  # Corregida la sangría
+      summary: Gets the products in cart with given id  
       tags:
         - Carts
       parameters:
