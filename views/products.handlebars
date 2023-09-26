@@ -43,10 +43,12 @@
       <p>Precio: {{this.price}}</p>
       <p>Stock: {{this.stock}}</p>
       <input type="number" min="1" max="{{this.stock}}" value="1" id="quantity-{{this.code}}">
+      
         <button class="cart"
                 type="button"
-                onclick="addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productid,document.getElementById('quantity-{{this.code}}').value)"
+                onclick=" console.log('Valor de this.dataset.productid:', this.dataset.productid);addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productid,document.getElementById('quantity-{{this.code}}').value)"
                 data-productid={{this.id}}
+               
               /> <img
                   class="cart"
                   src="../public/img/cart-plus-solid.svg"

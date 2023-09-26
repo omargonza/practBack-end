@@ -1,4 +1,4 @@
-/*import { createTransport } from "nodemailer";
+import { createTransport } from "nodemailer";
 import { CONFIG_EMAIL } from "../config/config.js";
 
 class EmailService {
@@ -10,7 +10,7 @@ class EmailService {
 
   async send(destinatario, mailOpt) {
     const mailOptions = {
-      from: "Astros Indumentaria Deportiva",
+      from: "Tiempo es Oro",
       to: destinatario,
       subject: mailOpt.subject,
       text: mailOpt.mensaje,
@@ -27,4 +27,3 @@ class EmailService {
 }
 
 export const emailService = new EmailService(CONFIG_EMAIL);
-*/

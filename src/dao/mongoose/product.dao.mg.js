@@ -25,7 +25,7 @@ export const SchemaProduts = new mongoose.Schema(
     category: {
       type: String,
       required: true,
-      enum: ["AFA", "CLUBS", "+SELECCIONES", "RETRO", "OTROS", "PERLITAS"],
+      enum: ["AUDEMARS", "ROLEX", "HUBLOT", "TAG", "ROLEXDAY", "OMEGA"],
     },
     owner: { type: String, required: true, default:'super-admin' },
   },

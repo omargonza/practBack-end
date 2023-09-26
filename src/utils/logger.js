@@ -1,4 +1,4 @@
-import { NODE_ENV } from "../config/config.js";
+/*import { NODE_ENV } from "../config/config.js";
 import winston from "winston";
 
 // solo a modo de referencia por si se decide trabajar con los que vienen por defecto
@@ -44,6 +44,53 @@ const loggerProd = winston.createLogger({
   ],
 });
 
+export let winLogger;
+if (NODE_ENV === "production") {
+  winLogger = loggerProd;
+} else {
+  winLogger = loggerDev;
+}
+*/
+
+import { NODE_ENV } from "../config/config.js";
+import winston from "winston";
+
+// Define tus niveles personalizados si es necesario
+const myOwnLevels = {
+  fatal: 0,
+  error: 1,
+  warning: 2,
+  info: 3,
+  https: 4,
+  verbose: 5,
+  debug: 6,
+};
+
+// Configuración de logger para entorno de desarrollo
+const loggerDev = winston.createLogger({
+  levels: myOwnLevels,
+  transports: [
+    new winston.transports.Console({
+      level: "debug",
+    }),
+  ],
+});
+
+// Configuración de logger para entorno de producción
+const loggerProd = winston.createLogger({
+  levels: myOwnLevels,
+  transports: [
+    new winston.transports.File({
+      level: "error",
+      filename: "error.log",
+    }),
+    new winston.transports.Console({
+      level: "info",
+    }),
+  ],
+});
+
+// Exporta el logger adecuado según el entorno
 export let winLogger;
 if (NODE_ENV === "production") {
   winLogger = loggerProd;

@@ -41,7 +41,44 @@ export default class CartsMongoose {
     if (!cart) throw new ErrorNotFound("Cart Not Found");
     return cart;
   }
-
+  async getProductsInCartById(cid) {
+    // Obtener el carrito correspondiente al cid
+    const cart = await this.getCartById(cid);
+    
+    // Utilizar el carrito en la agregación
+    const populatedCart = await this.#cartsDb.aggregate([
+      {
+        $match: { id: cart.id }, // Utiliza el campo adecuado (por ejemplo, id o _id)
+      },
+      {
+        $lookup: {
+          from: "products",
+          localField: "products.product",
+          foreignField: "id",
+          as: "product",
+        },
+      },
+      {
+        $unwind: "$products",
+      },
+      {
+        $project: {
+          _id: false,
+          product: {
+            $arrayElemAt: [
+              "$product",
+              { $indexOfArray: ["$product.id", "$products.product"] },
+            ],
+          },
+          quantity: "$products.quantity",
+        },
+      },
+    ]);
+  
+    return populatedCart;
+  }
+  
+/*
   async getProductsInCartById(cid) {
     const cart = await this.getCartById(cid);
     const populatedCart = await this.#cartsDb.aggregate([
@@ -75,6 +112,7 @@ export default class CartsMongoose {
 
     return populatedCart;
   }
+  */
 
   async addProductInCart(cid, pid, qt) {
     const cart = await this.getCartById(cid);

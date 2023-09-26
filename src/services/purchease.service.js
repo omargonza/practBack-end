@@ -3,7 +3,7 @@ import { cartRepository } from "../repositories/cart.repositrie.js";
 import { productsRepository } from "../repositories/product.repositorie.js";
 import { ticketsRepository } from "../repositories/ticket.repository.js";
 import { userRepository } from "../repositories/users.repository.js";
-/*import { emailService } from "./email.service.js";*/
+import { emailService } from "./email.service.js";
 
 class PurcheaseService {
   constructor() {}
@@ -30,16 +30,16 @@ class PurcheaseService {
     };
     const dataticket = new Tickets(info_tikcet);
     const ticket = await ticketsRepository.add(dataticket.dto());
- /*   const mailData = {
-      subject: "Confirmacion de Compra --Astros",
+    const mailData = {
+      subject: "Confirmacion de Compra --Tiempo es Oro",
       mensaje: `Hola,\n\n
-           Gracias por su compra en nuestra tienda, Te esperamos para el proximo partido.\n
-           N°Compra: ${ticket.code} \n
-           Total: $${ticket.amount}\n\n
-          Abrazo de gol\n
-          Astros ⭐`,
+      Gracias por su compra en nuestra tienda,\n
+      N°Compra: ${ticket.code} \n
+      Total: $${ticket.amount}\n\n
+      el tiempo es hoy\n
+      EL TIEMPO ES ORO`,
     };
-    await emailService.send(userEmail, mailData);*/
+    await emailService.send(userEmail, mailData);
     await this.adjustStock(data);
     if (process.env.PERSISTENCIA !== "mongoose") {
       await cartRepository.delAllProductsInCart(data.cart);
