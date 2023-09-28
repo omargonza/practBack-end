@@ -1,4 +1,4 @@
-/*import {
+import {
   ErrorInvalidQuantity,
   ErrorNotFound,
 } from "../models/error/errors.model.js";
@@ -85,9 +85,9 @@ class CartService {
   }
 }
 
-export const cartService = new CartService(cartRepository);*/
+export const cartService = new CartService(cartRepository);
 
-import {
+/*import {
   ErrorInvalidQuantity,
   ErrorNotFound,
 } from "../models/error/errors.model.js";
@@ -163,3 +163,4 @@ class CartService {
 }
 
 export const cartService = new CartService(cartRepository);
+*/
