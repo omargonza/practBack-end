@@ -43,47 +43,21 @@
       <p>Precio: {{this.price}}</p>
       <p>Stock: {{this.stock}}</p>
       <input type="number" min="1" max="{{this.stock}}" value="1" id="quantity-{{this.code}}">
-<button class="cart"
-        type="button"
-        onclick="console.log('Valor de data-productid:', data-productid);
-                 console.log('Contenido de dataset:', this.dataset);
-                 addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productid,document.getElementById('quantity-{{this.code}}').value)"
-        data-productid={{this.id}}>
-  <img class="cart"
-       src="../public/img/cart-plus-solid.svg"
-       alt="cart"
-  />
-</button>
-<button id="btnCompra"
-        productId={{this.idProduct}}
-        class="buttonShop"
-        onclick="addProductQuantityToCart(document.getElementById('cartref').href, this.getAttribute('productId'), document.getElementById('quantity-{{this.code}}').value)">
-  Añadir al carrito
-</button>
-
-         
-<!--
-    <button class="cart"
-    type="button"
-      onclick="var productId = this.getAttribute('data-productid');
-             if (productId) {
-               console.log('Valor de data-productid:', productId);
-               addProductQuantityToCart(document.getElementById('cartref').href, productId, document.getElementById('quantity-{{this.code}}').value);
-             } else {
-               console.log('data-productid no tiene un valor válido.');
-             }"
-    data-productid="{{this.id}}"
->
-  <img class="cart" src="../public/img/cart-plus-solid.svg" alt="cart" />
-</button>
-  --> 
-
-          
+        <button class="cart"
+                type="button"
+                onclick="addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productid,document.getElementById('quantity-{{this.code}}').value)"
+                data-productid={{this.id}}
+              /> <img
+                  class="cart"
+                  src="../public/img/cart-plus-solid.svg"
+                  alt="cart"
+                />
+              </button>
     </div>
       {{/each}}
   </div>
 {{else}}
-  <p class="">the product gallery is empty</p>
+  <p class="">La galeria de productos esta vacia</p>
 {{/if}}
 
 <nav aria-label="Page navigation">
@@ -93,14 +67,14 @@
     {{else}}
       <li class='page-item disabled'>
   {{/if}}
-      <a class="page-link" href={{list.prevLink}}>Prev Page</a>
+      <a class="page-link" href={{list.prevLink}}>Pagina previa</a>
     </li>
   {{#if list.hasNextPage}}
       <li class='page-item'>
     {{else}}
       <li class='page-item disabled'>
   {{/if}}
-      <a class="page-link" href={{list.nextLink}}>Next Page</a>
+      <a class="page-link" href={{list.nextLink}}>Pagina siguiente</a>
     </li>
   </ul>
 </nav>
@@ -142,7 +116,7 @@
     {{#if chat}}
     <div id="chat">
       <div class="btn"> <a href="/chat" class="btn"><i class="fa-solid fa-message" ></i></a></div>
-      <p>Chat here</p>
+      <p>Chatea aqui</p>
     </div>
     {{/if}}
   </div>
