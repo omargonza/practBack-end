@@ -5,7 +5,7 @@ export async function putPrdCart(req, res, next) {
   try {
     const productupd = await cartService.updateProducts(
       req.params.cid,
-      req.params.pid,
+      req.params.code,
       req.body.quantity,
       req.body
     );

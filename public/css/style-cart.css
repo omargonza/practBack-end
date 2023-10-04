@@ -110,7 +110,7 @@ strong {
 }
 
 .btn :hover {
-  color: #bd9cfa;
+  color: #a21309af;
   transform: scale(1.3);
 }
 
@@ -126,7 +126,7 @@ main {
 }
 
 #ordertitle {
-  color: #007bff;
+  color: #4d2921;
 }
 
 #cart-items {

@@ -5,7 +5,7 @@ export async function postPdrInCart(req, res, next) {
   try {
     const product = await cartService.chargeProducts(
       req.params.cid,
-      req.params.pid,
+      req.params.code,
       req.query.quantity
     );
     res.status(201).json(product);

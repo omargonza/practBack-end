@@ -5,7 +5,7 @@ export async function delPrdInCart(req, res, next) {
   try {
     const deleter = await cartService.deleteProducts(
       req.params.cid,
-      req.params.pid
+      req.params.code
     );
     res.status(200).json(deleter);
   } catch (error) {

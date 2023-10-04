@@ -35,7 +35,7 @@ async function payOrder(cid) {
       icon: "success",
       showConfirmButton: false,
       background: "#bd9cfa",
-      color: "#fff",
+      color: "#632e03d1",
       customClass: {
         popup: "custom-swal-popup",
       },

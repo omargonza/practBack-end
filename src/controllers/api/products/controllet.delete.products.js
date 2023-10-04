@@ -6,14 +6,14 @@ import { productsRepository } from "../../../repositories/product.repositorie.js
 export async function deleteProduct(req, res, next) {
   req.logger.https("inside delete products");
   try {
-    const producto = await productsRepository.findOneById(req.params.pid);
+    const producto = await productsRepository.findOneById(req.params.code);
     if (
       req.query.owner !== "super-admin" &&
       producto.owner !== req.query.owner
     ) {
       throw new ErrorPermissions("Product could be edit or delete by owner");
     }
-    await productsRepository.deleteOne(req.params.pid);
+    await productsRepository.deleteOne(req.params.code);
     if (producto.owner !== "super-admin") {
       const mailData = {
         subject: "Producto eliminado --Tiempo es oro",

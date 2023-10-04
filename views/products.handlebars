@@ -45,14 +45,16 @@
       <input type="number" min="1" max="{{this.stock}}" value="1" id="quantity-{{this.code}}">
         <button class="cart"
                 type="button"
-                onclick="addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productid,document.getElementById('quantity-{{this.code}}').value)"
-                data-productid={{this.id}}
+                onclick="addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productcode,document.getElementById('quantity-{{this.code}}').value)"
+                data-productcode={{this.code}}
               /> <img
                   class="cart"
                   src="../public/img/cart-plus-solid.svg"
                   alt="cart"
                 />
               </button>
+           
+
     </div>
       {{/each}}
   </div>
@@ -124,5 +126,5 @@
 
 <script src="/public/js/product.js"></script>
 <script src="/public/js/logout.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.1/tippy.all.min.js" integrity="sha512-NsiYiJ86BHeVbSzIzt35rQOwBdX9VC5qOUC2peSbnzad0Ae9mX4zt+wx9rH0uJrLrjtltOlLCCZPemf6O6pl0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 

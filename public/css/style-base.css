@@ -340,7 +340,7 @@ footer p {
 
 .dropdown-menu {
   display: none;
-  background-color: #bd9cfa;
+  background-color:#632e03d1;
   list-style: none;
   margin: 0;
   padding: 10px;
@@ -361,6 +361,6 @@ footer p {
 }
 
 .dropdown-menu li a:hover {
-  color: #01657ed1;
+  color: #f37004d1;
   transform: scale(1);
 }

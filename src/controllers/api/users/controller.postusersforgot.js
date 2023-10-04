@@ -14,7 +14,7 @@ export async function postUsersForgot(req, res, next) {
           Para restablecer tu contraseña, haz clic en el siguiente enlace: \n\n
           http://localhost:8080/recover?token=${recoveryToken}\n\n
           Si no has solicitado un restablecimiento de contraseña, ignora este correo.\n\n
-          Saludos Tiempo es horo,\n
+          Saludos Tiempo es Oro,\n
           `,
     };
     await emailService.send(user.email, mailData);

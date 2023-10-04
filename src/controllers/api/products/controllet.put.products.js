@@ -10,7 +10,7 @@ export async function updateProduct(req, res, next) {
     return next(error);
   }
   try {
-    const actualizada = await productsRepository.updateOne(req.params.pid, upd);
+    const actualizada = await productsRepository.updateOne(req.params.code, upd);
     await socketFn();
     res.json(actualizada);
   } catch (error) {
