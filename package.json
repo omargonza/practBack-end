@@ -8,8 +8,8 @@
     "start": "node .",
     "start:dev": "nodemon -e js,html,handlebars,css,yaml .",
     "start:prod": "NODE_ENV=production node .",
-    "test": "MONGODB_CNX_STR=mongodb://127.0.0.1:27017/test nodemon --exec mocha --recursive",
     "start:prodwin": "cross-env NODE_ENV=production node .",
+    "test": "MONGODB_CNX_STR=mongodb://127.0.0.1:27017/test nodemon --exec mocha --recursive",
     "testwin": "cross-env MONGODB_CNX_STR=mongodb://127.0.0.1:27017/test nodemon --exec mocha --recursive"
   },
   "keywords": [],

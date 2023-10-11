@@ -34,28 +34,26 @@
 {{#if listExist}}
   <div class="container">
       {{#each list.payload}}
-             <div class="product-card">
+      <div class="product-card"  id="product-{{@index}}">
       <img src="{{this.thumbnail}}" alt="no photo">
       <h2>{{this.title}}</h2>
       <p>Categoría: {{this.category}}</p>
-      <p>Item:{{this.code}}</p>
+      <p>Codigo:{{this.code}}</p>
       <p>Descripción: {{this.description}}</p>
       <p>Precio: {{this.price}}</p>
       <p>Stock: {{this.stock}}</p>
-      <input type="number" min="1" max="{{this.stock}}" value="1" id="quantity-{{this.code}}">
+      <input type="number" min="1" max="{{this.stock}}" value="1"  id="quantity-{{@index}}">
         <button class="cart"
                 type="button"
-                onclick="addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productcode,document.getElementById('quantity-{{this.code}}').value)"
-                data-productcode={{this.code}}
+                onclick="addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productcode,document.getElementById('quantity-{{@index}}').value)"
+                data-productcode="{{this.code}}"
               /> <img
                   class="cart"
                   src="../public/img/cart-plus-solid.svg"
                   alt="cart"
                 />
               </button>
-           
-
-    </div>
+          </div>
       {{/each}}
   </div>
 {{else}}
@@ -125,6 +123,6 @@
 </footer>
 
 <script src="/public/js/product.js"></script>
-<script src="/public/js/logout.js"></script>
+<script src="/public/js/logout.js"></scrip>
 
 

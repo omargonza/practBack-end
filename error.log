@@ -65,3 +65,7 @@
 {"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
 {"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
 {"level":"error","message":{"description":"Authentication Error","estado":"error","tipo":"AUTHENTICATION_ERROR"}}
+{"level":"error","message":"post ticket fail Cannot access 'info' before initialization"}
+{"level":"error","message":{"estado":"error"}}
+{"level":"error","message":"invalid ticket view"}
+{"level":"error","message":{"description":"Not Found","estado":"error","tipo":"NOT_FOUND"}}

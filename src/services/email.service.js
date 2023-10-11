@@ -18,12 +18,15 @@ class EmailService {
       attachments: mailOpt.attachments,
     };
     try {
+      console.log(info);
       const info = await this.#clienteNodemailer.sendMail(mailOptions);
       return info;
+     
     } catch (error) {
       throw error;
-    }
+    } 
   }
 }
+
 
 export const emailService = new EmailService(CONFIG_EMAIL);
