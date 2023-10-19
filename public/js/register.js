@@ -40,7 +40,7 @@ if (formRegister instanceof HTMLFormElement) {
           showConfirmButton: true,
           title: `Creation Success`,
           icon: "success",
-          background: "#600252",
+          background: "  #742b07",
           color: "#fff",
           confirmButtonColor: "#01657ed1",
         });
@@ -52,7 +52,7 @@ if (formRegister instanceof HTMLFormElement) {
           showConfirmButton: true,
           title: `Authentication Failed`,
           icon: "error",
-          background: "#600252",
+          background: "  #742b07",
           color: "#fff",
           confirmButtonColor: "#01657ed1",
         });

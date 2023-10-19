@@ -12,7 +12,7 @@ export async function postUsersForgot(req, res, next) {
       subject: "Recuperación de contraseña",
       mensaje: `Hola,\n\n
           Para restablecer tu contraseña, haz clic en el siguiente enlace: \n\n
-          https://pf43340.onrender.com/recover?token=${recoveryToken}\n\n
+          http://localhost:8080/recover?token=${recoveryToken}\n\n
           Si no has solicitado un restablecimiento de contraseña, ignora este correo.\n\n
           Saludos Tiempo es Oro,\n
           `,

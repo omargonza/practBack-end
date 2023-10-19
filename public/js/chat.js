@@ -1,11 +1,11 @@
-/* eslint-disable no-undef */
+//* eslint-disable no-undef */
 // @ts-ignore
 const serverSocket = io();
 
 // @ts-ignore
 Swal.fire({
-  title: "Insert your email",
-  input: "email",
+  title: "Inserte Usuario",
+  input: "Usuario",
   inputValidator: (value) => {
     return !value && "¡You need send a valid email to start chat!";
   },

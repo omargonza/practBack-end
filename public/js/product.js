@@ -5,7 +5,7 @@ async function addProductQuantityToCart(cid, code, quantity) {
 
   const cidarr = cid.split("carts/");
   const cidt = cidarr[1];
-  const FETCH_URL = `https://pf43340.onrender.com/api/carts/${cidt}/product/${code}?quantity=${quantity}`;
+  const FETCH_URL = `http://localhost:8080/api/carts/${cidt}/product/${code}?quantity=${quantity}`;
   
   const { status } = await fetch(FETCH_URL, { method: "POST" });
 
@@ -17,7 +17,7 @@ async function addProductQuantityToCart(cid, code, quantity) {
       showConfirmButton: true,
       title: `Added product`,
       icon: "success",
-      background: "#bd9cfa",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -29,7 +29,7 @@ async function addProductQuantityToCart(cid, code, quantity) {
       showConfirmButton: true,
       title: `Not Enough Stock`,
       icon: "info",
-      background: "#600252",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -100,4 +100,3 @@ if (profileIcon instanceof HTMLElement && profileMenu instanceof HTMLElement) {
 } else {
   console.error("No se encontraron los elementos necesarios.");
 }
-

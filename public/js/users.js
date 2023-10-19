@@ -1,5 +1,5 @@
 async function deleteUser(uid) {
-  const FETCH_URL = `https://pf43340.onrender.com/api/users/${uid}`;
+  const FETCH_URL = `http://localhost:8080/api/users/${uid}`;
   const { status } = await fetch(FETCH_URL, { method: "DELETE" });
 
   if (status === 200) {
@@ -10,7 +10,7 @@ async function deleteUser(uid) {
       showConfirmButton: true,
       title: `User Deleted`,
       icon: "success",
-      background: "#bd9cfa",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -23,7 +23,7 @@ async function deleteUser(uid) {
       showConfirmButton: true,
       title: `Delete Fail`,
       icon: "info",
-      background: "#600252",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -31,7 +31,7 @@ async function deleteUser(uid) {
 }
 
 async function upgradeUser(uid) {
-  const FETCH_URL = `https://pf43340.onrender.com/api/users/admin/${uid}`;
+  const FETCH_URL = `http://localhost:8080/api/users/admin/${uid}`;
   const { status } = await fetch(FETCH_URL, { method: "GET" });
 
   if (status === 200) {
@@ -42,7 +42,7 @@ async function upgradeUser(uid) {
       showConfirmButton: true,
       title: `User role changed`,
       icon: "success",
-      background: "#bd9cfa",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -55,7 +55,7 @@ async function upgradeUser(uid) {
       showConfirmButton: true,
       title: `Change Fail`,
       icon: "info",
-      background: "#600252",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -63,7 +63,7 @@ async function upgradeUser(uid) {
 }
 
 async function deleteAllUsers() {
-  const FETCH_URL = `https://pf43340.onrender.com/api/users`;
+  const FETCH_URL = `http://localhost:8080/api/users`;
   const { status } = await fetch(FETCH_URL, { method: "DELETE" });
 
   if (status === 200) {
@@ -74,7 +74,7 @@ async function deleteAllUsers() {
       showConfirmButton: true,
       title: `Inactive users cleaned`,
       icon: "success",
-      background: "#bd9cfa",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -87,7 +87,7 @@ async function deleteAllUsers() {
       showConfirmButton: true,
       title: `Clean Fail`,
       icon: "info",
-      background: "#600252",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });

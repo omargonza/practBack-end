@@ -40,7 +40,11 @@
         </div>
       {{/each}}
     </section>
-    <button id="pay-button" onclick="payOrder(document.getElementById('cartref').href)">Pagar mi orden</button>
+    <button id="pay-button"
+     type="button"
+     onclick="payOrder(document.getElementById('cartref').href,this.dataset.productcode)"
+      data-productcode="{{this.product.code}}"
+      />Pagar mi orden</button>
   {{else}}
     <p class="">Aún no hay productos</p>
   {{/if}}

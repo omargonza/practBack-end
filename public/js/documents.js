@@ -55,7 +55,7 @@ function handleFileChange() {
       showConfirmButton: true,
       title: `File added`,
       icon: "success",
-      background: "#bd9cfa",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -72,7 +72,7 @@ function handleFileChange() {
       showConfirmButton: true,
       title: `File added`,
       icon: "success",
-      background: "#bd9cfa",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -89,7 +89,7 @@ function handleFileChange() {
       showConfirmButton: true,
       title: `File added`,
       icon: "success",
-      background: "#bd9cfa",
+      background: " #742b07",
       color: "#fff",
       confirmButtonColor: "#01657ed1",
     });
@@ -156,7 +156,7 @@ async function handleSubmit(event) {
         showConfirmButton: true,
         title: `Files added success`,
         icon: "success",
-        background: "#bd9cfa",
+        background: " #742b07",
         color: "#fff",
         confirmButtonColor: "#01657ed1",
       });
@@ -167,7 +167,7 @@ async function handleSubmit(event) {
         showConfirmButton: true,
         title: `Some File Failed`,
         icon: "error",
-        background: "#600252",
+        background: " #742b07",
         color: "#fff",
         confirmButtonColor: "#01657ed1",
       });
