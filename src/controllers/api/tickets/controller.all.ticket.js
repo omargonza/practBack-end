@@ -9,15 +9,28 @@ export async function handlePost(req, res, next) {
     res.status(200).json(ticket);
   } catch (error) {
     req.logger.error(`post ticket fail ${error.message}`);
-    next(error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 }
 
-export async function handleGet(req, res) {
+export async function handleGet(req, res, next) {
   req.logger.https("inside get tickets");
-  const ticket = await ticketsRepository.findOneById(req.params.id);
-  return ticket;
+  try {
+    const ticket = await ticketsRepository.findOneById(req.params.id);
+    // Si el ticket no se encuentra, devolver un código de estado 404 (Not Found)
+    if (!ticket) {
+      res.status(404).json({ error: "Ticket not found" });
+      return;
+    }
+    // Enviar el ticket como respuesta JSON al cliente
+    res.status(200).json(ticket);
+  } catch (error) {
+    req.logger.error(`get ticket fail ${error.message}`);
+    // Enviar un código de estado 500 (Internal Server Error) en caso de error
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 }
+
 
 export async function handlePut(req, res) {
   //en construccion esta pensado para hacer borrado logico o cambiar el estado de los ticket cuando se incoopore plataformas de pago.

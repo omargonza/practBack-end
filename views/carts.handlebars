@@ -31,7 +31,7 @@
             <li>Precio: ${{this.product.price}}</li>
             <li>Cantidad: {{this.quantity}}</li>
           </ul>
-           <button class="remove-item"
+          <button class="remove-item"
                 type="button"
                 onclick="delProductInCartShop(document.getElementById('cartref').href,this.dataset.productcode)"
                 data-productcode="{{this.product.code}}"
@@ -40,11 +40,11 @@
         </div>
       {{/each}}
     </section>
-    <button id="pay-button"
-     type="button"
-     onclick="payOrder(document.getElementById('cartref').href,this.dataset.productcode)"
-      data-productcode="{{this.product.code}}"
-      />Pagar mi orden</button>
+ <button id="pay-button"
+        type="button"
+        data-datac="{{this.cartCode}}"
+        onclick="payOrder(this.getAttribute('data-datac'))">Pagar mi orden</button>
+
   {{else}}
     <p class="">Aún no hay productos</p>
   {{/if}}
