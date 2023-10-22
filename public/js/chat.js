@@ -1,6 +1,6 @@
 //* eslint-disable no-undef */
 // @ts-ignore
-const serverSocket = io();
+/*const serverSocket = io();
 
 // @ts-ignore
 Swal.fire({
@@ -15,6 +15,29 @@ Swal.fire({
   if (!(inputAutor instanceof HTMLInputElement)) return;
   inputAutor.value = result.value;
   serverSocket.emit("nuevoUsuario", inputAutor.value);
+});
+*/
+
+const serverSocket = io();
+
+// @ts-ignore
+Swal.fire({
+  title: "Inserte Usuario",
+  input: "text",  // Corrección: Se espera un campo de texto.
+  inputValidator: (value) => {
+    // Corrección: Validar que se ingrese un correo electrónico válido.
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return !value.match(emailRegex) && "¡Debe ingresar un correo electrónico válido para comenzar el chat!";
+  },
+  allowOutsideClick: false,
+}).then((result) => {
+  if (result.isConfirmed) {
+    const inputAutor = document.querySelector("#inputAutor");
+    if (inputAutor instanceof HTMLInputElement) {
+      inputAutor.value = result.value;
+      serverSocket.emit("nuevoUsuario", inputAutor.value);
+    }
+  }
 });
 
 const btnEnviar = document.querySelector("#btnEnviar");

@@ -5,7 +5,7 @@
     console.log("cidt:", cidt);
     console.log("cartCode:", cartCode);
     // Construir la URL de la solicitud
-    const FETCH_URL = ` https://pf43340.onrender.com/api/tickets`;
+    const FETCH_URL = `   https://pf43340.onrender.com/api/tickets`;
 
     // Realizar la solicitud al servidor
     const response = await fetch(FETCH_URL, {
@@ -75,7 +75,7 @@ async function payOrder(cid) {
     const cidt = cidarr[1];
     console.log("cidt:", cidt);
     
-    const FETCH_URL = ` https://pf43340.onrender.com/api/tickets`;
+    const FETCH_URL = `   https://pf43340.onrender.com/api/tickets`;
 
     const response = await fetch(FETCH_URL, {
       method: "POST",
@@ -139,7 +139,7 @@ async function payOrder(cid) {
     console.log("cidt:", cidt);
   
     // Construir la URL de la solicitud
-    const FETCH_URL = ` https://pf43340.onrender.com/api/tickets`;
+    const FETCH_URL = `   https://pf43340.onrender.com/api/tickets`;
     console.log(info.propiedad);
     // Realizar la solicitud al servidor
     const response = await fetch(FETCH_URL, {
@@ -203,7 +203,7 @@ function extractCartIdFromUrl(url) {
 
 async function payOrder(cartCode) {
   try {
-      const response = await fetch(` https://pf43340.onrender.com/api/tickets`, {
+      const response = await fetch(`   https://pf43340.onrender.com/api/tickets`, {
           method: "POST",
           body: JSON.stringify({ cart: cartCode }),
           headers: { "Content-Type": "application/json" },
