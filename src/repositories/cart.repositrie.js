@@ -17,10 +17,16 @@ export class CartModelRepository {
   async getCartById(datac) {
     return this.#dao.getCartById(datac);
   }
-
+/*
   async getProductsInCartById(datac) {
     return this.#dao.getProductsInCartById(datac);
   }
+*/async getProductsInCartById(datac) {
+  console.log(`Antes de llamar a this.#dao.getProductsInCartById con ID: ${datac}`);
+  const result = await this.#dao.getProductsInCartById(datac);
+  console.log(`Después de llamar a this.#dao.getProductsInCartById con ID: ${datac}`);
+  return result;
+}
 
   async addProductInCart(datac, datap, dataq) {
     return this.#dao.addProductInCart(datac, datap, dataq);

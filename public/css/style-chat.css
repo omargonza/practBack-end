@@ -1,0 +1,87 @@
+/* Estilo para el encabezado h1 */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para las etiquetas y campos de entrada */
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="email"],
+  input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+  }
+  
+  /* Estilo para el botón de enviar */
+  #btnEnviar {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #btnEnviar:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo para el contenedor de mensajes */
+  h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  #mensajes {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilo para los mensajes individuales */
+  .mensaje {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para animación de entrada de mensajes */
+  .mensaje-entrada {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

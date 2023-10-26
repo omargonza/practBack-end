@@ -5,6 +5,9 @@ import { ticketService } from "../../../services/purchease.service.js";
 export async function handlePost(req, res, next) {
   req.logger.https("inside post ticket");
   try {
+    // Asegúrate de que req.body contiene una propiedad 'cart' con un ID de carrito válido
+    console.log(`Valor de req.body.cart: ${req.body.cart}`);
+    console.log(`Valor de req.body: ${JSON.stringify(req.body)}`);
     const ticket = await ticketService.createTicket(req.body);
     res.status(200).json(ticket);
   } catch (error) {

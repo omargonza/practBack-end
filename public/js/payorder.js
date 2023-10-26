@@ -1,209 +1,7 @@
-/*async function payOrder(cid, ) {
-  try {
-    const cidt = extractCartIdFromUrl(cid);
-    const cartCode = document.getElementById('pay-button').getAttribute('data-datac');
-    console.log("cidt:", cidt);
-    console.log("cartCode:", cartCode);
-    // Construir la URL de la solicitud
-    const FETCH_URL = `   https://pf43340.onrender.com/api/tickets`;
-
-    // Realizar la solicitud al servidor
-    const response = await fetch(FETCH_URL, {
-      method: "POST",
-      body: JSON.stringify({ cart: cidt }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    // Verificar el estado de la respuesta
-    if (!response.ok) {
-      throw new Error(`Error del servidor: ${response.statusText}`);
-    }
-
-    // Obtener el ticket desde la respuesta
-    const ticket = await response.json();
-
-    // Verificar si se recibió un ticket válido
-    if (!ticket || !ticket.code) {
-      throw new Error("No se pudo procesar la orden correctamente. Por favor, inténtalo de nuevo más tarde.");
-    }
-
-    // Redirigir al usuario al ticket
-    location.href = `/ticket/${ticket.code}?cart=${cidt}`;
-
-    // Mostrar un mensaje de éxito al usuario
-    Swal.fire({
-      title: "Compra Confirmada",
-      text: "Tu compra se ha confirmado correctamente.",
-      icon: "success",
-      showConfirmButton: false,
-      background: " #742b07",
-      color: "#632e03d1",
-      customClass: {
-        popup: "custom-swal-popup",
-      },
-      timer: 3000,
-    });
-  } catch (error) {
-    // Capturar y manejar errores específicos
- 
-
-    // Mostrar un mensaje de error al usuario
-    Swal.fire({
-      title: "Error",
-      text: error.message,
-      icon: "error",
-      background: " #742b07",
-      color: "#fff",
-      confirmButtonColor: "#01657ed1",
-    });
-  }
-}
-
-// Función para extraer el ID del carrito de la URL
-function extractCartIdFromUrl(url) {
-  const cidarr = url.split("carts/");
-  return cidarr[1];
-}*/
-
-
-
 /*
-async function payOrder(cid) {
-  try {
-   
-    const cidarr = cid.split("carts/");
-    const cidt = cidarr[1];
-    console.log("cidt:", cidt);
-    
-    const FETCH_URL = `   https://pf43340.onrender.com/api/tickets`;
-
-    const response = await fetch(FETCH_URL, {
-      method: "POST",
-      body: JSON.stringify({ cart: cidt }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (!response.ok) {
-      // Manejar errores de red u otros errores del servidor
-      throw new Error(`Error del servidor: ${response.statusText}`);
-    }
-
-    const ticket = await response.json();
-
-    if (!ticket) {
-      // Manejar el caso donde no se recibió un ticket válido
-      throw new Error("No se pudo procesar la orden correctamente. Por favor, inténtalo de nuevo más tarde.");
-    }
-
-    // La orden se procesó correctamente, redirige al usuario al ticket
-    location.href = `/ticket/${ticket.code}?cart=${cidt}`;
-
-    // Muestra un mensaje de éxito al usuario
-    Swal.fire({
-      title: "Compra Confirmada",
-      text: "Tu compra se ha confirmado correctamente.",
-      icon: "success",
-      showConfirmButton: false,
-      background: " #742b07",
-      color: "#632e03d1",
-      customClass: {
-        popup: "custom-swal-popup",
-      },
-      timer: 3000,
-    });
-  } catch (error) {
-    // Captura y maneja errores específicos
-    console.error("Error:", error.message);
-
-    // Muestra un mensaje de error al usuario
-    Swal.fire({
-      title: "Error",
-      text: error.message,
-      icon: "error",
-      background: " #742b07",
-      color: "#fff",
-      confirmButtonColor: "#01657ed1",
-    });
-  }
-}
-*/
-
-/*
-
-async function payOrder(cid) {
-  let info = {}; // Inicializar la variable info como un objeto vacío
-
-  try {
-    // Extraer el ID del carrito de la URL (si es necesario)
-    const cidt = extractCartIdFromUrl(cid);
-    console.log("cidt:", cidt);
-  
-    // Construir la URL de la solicitud
-    const FETCH_URL = `   https://pf43340.onrender.com/api/tickets`;
-    console.log(info.propiedad);
-    // Realizar la solicitud al servidor
-    const response = await fetch(FETCH_URL, {
-      method: "POST",
-      body: JSON.stringify({ cart: cidt }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    // Verificar el estado de la respuesta
-    if (!response.ok) {
-      throw new Error(`Error del servidor: ${response.statusText}`);
-    }
-
-    // Obtener el ticket desde la respuesta
-    const ticket = await response.json();
-
-    // Verificar si se recibió un ticket válido
-    if (!ticket || !ticket.code) {
-      throw new Error("No se pudo procesar la orden correctamente. Por favor, inténtalo de nuevo más tarde.");
-      
-    }
-
-    // Redirigir al usuario al ticket
-    location.href = `/ticket/${ticket.code}?cart=${cidt}`;
-
-    // Mostrar un mensaje de éxito al usuario
-    Swal.fire({
-      title: "Compra Confirmada",
-      text: "Tu compra se ha confirmado correctamente.",
-      icon: "success",
-      showConfirmButton: false,
-      background: " #742b07",
-      color: "#632e03d1",
-      customClass: {
-        popup: "custom-swal-popup",
-      },
-      timer: 3000,
-    });
-  } catch (error) {
-    // Capturar y manejar errores específicos
-    console.error("Error:", error.message);
-
-    // Mostrar un mensaje de error al usuario
-    Swal.fire({
-      title: "Error",
-      text: error.message,
-      icon: "error",
-      background: " #742b07",
-      color: "#fff",
-      confirmButtonColor: "#01657ed1",
-    });
-  }
-}
-
-// Función para extraer el ID del carrito de la URL
-function extractCartIdFromUrl(url) {
-  const cidarr = url.split("carts/");
-  return cidarr[1];
-}
-*/
-
 async function payOrder(cartCode) {
   try {
-      const response = await fetch(`   https://pf43340.onrender.com/api/tickets`, {
+      const response = await fetch(`   http://localhost:8080/api/tickets`, {
           method: "POST",
           body: JSON.stringify({ cart: cartCode }),
           headers: { "Content-Type": "application/json" },
@@ -249,4 +47,79 @@ async function payOrder(cartCode) {
           confirmButtonColor: "#01657ed1",
       });
   }
+}*/
+
+async function payOrder(cid) {
+  // Verifico si cid es válido
+  if (!cid || typeof cid !== 'string') {
+    console.error('El valor de cid es inválido:', cid);
+    return;
+  }
+
+  const cidarr = cid.split("carts/");
+  
+  // Verifico si cidarr es un array con al menos dos elementos
+  if (!Array.isArray(cidarr) || cidarr.length < 2) {
+    console.error('El valor de cidarr es inválido:', cidarr);
+    return;
+  }
+
+  const cidt = cidarr[1];
+
+  // Verifico si cidt es válido
+  if (!cidt || typeof cidt !== 'string') {
+    console.error('El ID del carrito es inválido:', cidt);
+    return;
+  }
+
+  const FETCH_URL = `http://localhost:8080/api/tickets`;
+
+  try {
+    const response = await fetch(FETCH_URL, {
+      method: "POST",
+      body: JSON.stringify({ cart: cidt }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    // Verifico el estado de la respuesta HTTP
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const ticket = await response.json();
+
+    // Verifico si ticket es nulo o indefinido y si tiene una propiedad 'code'
+    if (!ticket || typeof ticket !== 'object' || !ticket.hasOwnProperty('code')) {
+      // @ts-ignore
+      Swal.fire({
+        toast: true,
+        showConfirmButton: true,
+        title: `Purchase Failure`,
+        icon: "error",
+        background: "#600252",
+        color: "#fff",
+        confirmButtonColor: "#01657ed1",
+      });
+      return;
+    }
+
+    location.href = `/ticket/${ticket.code}?cart=${cidt}`;
+
+    // @ts-ignore
+    await Swal.fire({
+      title: "Purchase Confirmed",
+      text: "Your purchase has been successfully confirmed.",
+      icon: "success",
+      showConfirmButton: false,
+      background: "#bd9cfa",
+      color: "#fff",
+      customClass: {
+        popup: "custom-swal-popup",
+      },
+      timer: 3000,
+    });
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
 }
+
