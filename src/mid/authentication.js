@@ -44,7 +44,7 @@ passport.use(
     {
       clientID: CLIENTID_GIT,
       clientSecret: CLIENTSCR_GIT,
-      callbackURL: "   http://localhost:8080/api/sessions/gitcall",
+      callbackURL: "   https://pf43340.onrender.com/api/sessions/gitcall",
       passReqToCallback: true,
     },
     async (req, accessToken, refreshToken, profile, done) => {
@@ -97,7 +97,7 @@ passport.use(
     {
       clientID: CLIENTID_GIT,
       clientSecret: CLIENTSCR_GIT,
-      callbackURL: "   http://localhost:8080/api/sessions/gitcall",
+      callbackURL: "   https://pf43340.onrender.com/api/sessions/gitcall",
       passReqToCallback: true,
     },
     async (req, accessToken, refreshToken, profile, done) => {

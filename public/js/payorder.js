@@ -1,7 +1,7 @@
 /*
 async function payOrder(cartCode) {
   try {
-      const response = await fetch(`   http://localhost:8080/api/tickets`, {
+      const response = await fetch(`   https://pf43340.onrender.com/api/tickets`, {
           method: "POST",
           body: JSON.stringify({ cart: cartCode }),
           headers: { "Content-Type": "application/json" },
@@ -72,7 +72,7 @@ async function payOrder(cid) {
     return;
   }
 
-  const FETCH_URL = `http://localhost:8080/api/tickets`;
+  const FETCH_URL = `https://pf43340.onrender.com/api/tickets`;
 
   try {
     const response = await fetch(FETCH_URL, {

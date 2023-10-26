@@ -5,7 +5,7 @@ async function addProductQuantityToCart(cid, code, quantity) {
 
   const cidarr = cid.split("carts/");
   const cidt = cidarr[1];
-  const FETCH_URL = `   http://localhost:8080/api/carts/${cidt}/product/${code}?quantity=${quantity}`;
+  const FETCH_URL = `   https://pf43340.onrender.com/api/carts/${cidt}/product/${code}?quantity=${quantity}`;
   
   const { status } = await fetch(FETCH_URL, { method: "POST" });
 
