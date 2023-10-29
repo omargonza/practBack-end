@@ -48,14 +48,19 @@ async function payOrder(cartCode) {
       });
   }
 }*/
-
-async function payOrder(cid) {
+async function payOrder(cid, ) {
   // Verifico si cid es válido
   if (!cid || typeof cid !== 'string') {
     console.error('El valor de cid es inválido:', cid);
     return;
   }
 
+/*  // Verifico si code es válido
+  if (!code || typeof code !== 'string') {
+    console.error('El valor de code es inválido:', code);
+    return;
+  }
+*/
   const cidarr = cid.split("carts/");
   
   // Verifico si cidarr es un array con al menos dos elementos
@@ -72,8 +77,9 @@ async function payOrder(cid) {
     return;
   }
 
-  const FETCH_URL = `https://pf43340.onrender.com/api/tickets`;
 
+  const FETCH_URL = `https://pf43340.onrender.com/api/tickets`;
+  console.log(`Solicitud a: ${FETCH_URL}`);
   try {
     const response = await fetch(FETCH_URL, {
       method: "POST",
@@ -122,4 +128,3 @@ async function payOrder(cid) {
     console.error("An error occurred:", error);
   }
 }
-
